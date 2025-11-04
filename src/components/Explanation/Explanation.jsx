@@ -1,6 +1,5 @@
 import React from 'react'
 import { easeIn, motion } from 'framer-motion'
-import { transition } from 'three/examples/jsm/tsl/display/TransitionNode.js';
 
 const ExplanationData  = [{
     id: 1,

@@ -4,8 +4,8 @@ export const NavNames = [{
     link: "/"
 }, {
     id: 2,
-    title: "私たちの製品",
-    link: "/about"
+    title: "企業理念",
+    link: "/philosophy"
 }, {
     id: 3,
     title: "ストア",

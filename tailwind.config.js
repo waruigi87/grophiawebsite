@@ -20,6 +20,9 @@ export default {
           '2xl': '6rem',
         },
       },
+      boxShadow: {
+        'page': 'inset 0 0 8px rgba(0,0,0,0.6), 12px 12px 14px rgba(0,0,0,0.9)',
+      },
     },
   },
   plugins: [],

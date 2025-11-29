@@ -1,30 +1,32 @@
 import React from 'react'
-import { Navbar } from './components/Navbar/Navbar.jsx'
-import NavbarBanner from './components/Navbar/NavbarBanner.jsx'
-import Hero from './components/Hero/Hero.jsx'
-import Explanation from './components/Explanation/Explanation.jsx'
-import Ourbusiness from './components/Explanation/Ourbusiness.jsx'
-import Members from './components/Explanation/Members.jsx'
-import Instagram from './components/SNS/Instagram.jsx'
-import Footer from './components/Footer/Footer.jsx'
+import Home from './components/Page/Home'
+import Philosophy from './components/Page/Philosophy';
+import Store from './components/Page/Store';
+import {createBrowserRouter, RouterProvider, Link, Outlet, } from 'react-router-dom'
+
+
+const router = createBrowserRouter([
+  {
+    element: <Outlet />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/philosophy",
+        element: <Philosophy />
+      },
+      {
+        path: "/store",
+        element: <Store />
+      }
+    ]
+  }
+]);
 
 const App = () => {
-  return (
-    <main className="overflow-x-hidden">
-      <Navbar />
-      <NavbarBanner />
-      <Hero />
-      <Explanation />
-      <Ourbusiness />
-      <Members />
-      <Instagram />
-      <Footer />
-
-
-
-
-    </main>
-  )
+  return <RouterProvider router={router} />;
 }
 
 export default App

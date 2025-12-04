@@ -3,8 +3,7 @@ import React from 'react'
 function SecondPage() {
   return (
     <>
-    <div className='h-full'>
-        <main className='h-full w-full bg-[#f9f7f0] page-shadow'>
+        <main className='h-full w-full bg-[#f9f7f0] page-shadow shadow-[inset_0_10px_20px_rgba(0,0,0,0.12)]'>
             <div className="container">
                 <div>
                     <div>
@@ -18,7 +17,6 @@ function SecondPage() {
 
         </main>
 
-    </div>
     </>
   )
 }

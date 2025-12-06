@@ -1,5 +1,5 @@
-import React from 'react'
-import MyBook from './MyBook.jsx'
+import React from 'react';
+import MyBook from './MyBook.jsx';
 
 function Book() {
     const bgStyle = {
@@ -8,20 +8,17 @@ function Book() {
         backgroundPosition: 'center',
         minHeight: '100vh',
         backgroundRepeat: 'no-repeat',
-
     };
 
-  return (
-    <>
-        <div style={bgStyle} className='w-full h-full flex items-center justify-center'>
-            <div>
-                <MyBook />
-
-
+    return (
+        <>
+            <div style={bgStyle} className="w-full h-full flex items-center justify-center">
+                <div>
+                    <MyBook />
+                </div>
             </div>
-        </div>
-    </>
-  )
+        </>
+    );
 }
 
-export default Book
+export default Book;

@@ -3,15 +3,48 @@
 @tailwind utilities;
 
 @layer base {
-  .font-outline {
-    -webkit-text-stroke: 2px white;
-  }
+    .font-outline {
+        -webkit-text-stroke: 2px white;
+    }
+
+    :root {
+        --surface-primary: #ffffff;
+        --surface-secondary: #f9f7f0;
+        --surface-third: #2e6417;
+    }
 }
 
 @layer components {
-  .primary-button {
-    @apply;
-  }
+    /* ページ全体のラッパー（共通） */
+    .page-wrapper {
+        @apply min-h-screen py-12;
+    }
 
-  
+    /* プリセット: surface-primary / surface-secondary / surface-third に統一
+     Tailwind の theme.colors.primary と名前が衝突するためカスタム名に変更しています */
+    .surface-primary {
+        background-color: var(--surface-primary);
+    }
+
+    .surface-secondary {
+        background-color: var(--surface-secondary);
+    }
+
+    .surface-third {
+        background-color: var(--surface-third);
+    }
+
+    /* 中央コンテンツカード（共通） */
+    .content-card {
+        @apply max-w-lg mx-auto bg-white/90 shadow-md rounded-md p-8 mt-10 backdrop-blur-sm;
+    }
+
+    .content-card--dark {
+        @apply max-w-lg mx-auto bg-slate-800/80 shadow-md rounded-md p-8 mt-10 text-white backdrop-blur-sm;
+    }
+
+    /* 汎用ボタン（例） */
+    .primary-button {
+        @apply w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition;
+    }
 }
